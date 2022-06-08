@@ -13,7 +13,7 @@ public class Config {
     private static JsonNode     jsonNode;
     private static ObjectNode   objectNode;
 
-    private static String       token, prefix;
+    private static String       token, prefix, announceChannelID;
 
 
     public void load() {
@@ -25,6 +25,8 @@ public class Config {
 
             token = objectNode.get("token").asText();
             prefix = objectNode.get("prefix").asText();
+
+            announceChannelID = objectNode.get("announece-channel-ID").asText();
         }catch (Exception e) {
             Logger.warn(e.toString());
             Logger.warn("Couldn't load config.json");
