@@ -26,7 +26,7 @@ public class Config {
             token = objectNode.get("token").asText();
             prefix = objectNode.get("prefix").asText();
 
-            announceChannelID = objectNode.get("announece-channel-ID").asText();
+            announceChannelID = objectNode.get("announce-channel-ID").asText();
         }catch (Exception e) {
             Logger.warn(e.toString());
             Logger.warn("Couldn't load config.json");
@@ -48,5 +48,9 @@ public class Config {
 
     public String getPrefix() {
         return prefix;
+    }
+
+    public String getAnnounceChannelID() {
+        return announceChannelID;
     }
 }
